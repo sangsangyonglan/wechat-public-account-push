@@ -21,7 +21,10 @@ export default async function mainForProd() {
   const aggregatedData = await getAggregatedData()
   console.log('【数据获取】结束')
   console.log('---')
-
+String[] splits = StrUtil.split(longText, 20); //longText为长文本
+for (int i = 0; i < splits.length; i++) {
+  templateMessage.addData(new WxMpTemplateData("rain_" + i, splits[i], (String) colors.get(14))); //这个颜色属性无关紧要
+}
   // 公众号推送消息
   console.log('---')
   console.log('【常规模板】推送开始')
