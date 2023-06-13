@@ -264,6 +264,7 @@ export const getWordsFromApiShadiao = async (type) => {
  * 土味情话（彩虹屁）
  * @returns {Promise<String>} 土味情话(彩虹屁）内容
  */
+
 export const getEarthyLoveWords = async () => {
   if (config.SWITCH && config.SWITCH.earthyLoveWords === false) {
     return ''
